@@ -418,12 +418,12 @@ public class KeyguardStatusView extends GridLayout implements
 
     private int getLockClockFont() {
         return Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.LOCK_CLOCK_FONTS, 29);
+                Settings.System.LOCK_CLOCK_FONTS, 28);
     }
 
     private int getLockDateFont() {
         return Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.LOCK_DATE_FONTS, 29);
+                Settings.System.LOCK_DATE_FONTS, 28);
     }
 
     private void refreshFormat() {
@@ -875,7 +875,7 @@ public class KeyguardStatusView extends GridLayout implements
     private void refreshLockFont() {
         final Resources res = getContext().getResources();
         boolean isPrimary = UserHandle.getCallingUserId() == UserHandle.USER_OWNER;
-        int lockClockFont = isPrimary ? getLockClockFont() : 29;
+        int lockClockFont = isPrimary ? getLockClockFont() : 28;
 
         if (lockClockFont == 0) {
             mClockView.setTypeface(Typeface.create("sans-serif", Typeface.NORMAL));
@@ -973,12 +973,15 @@ public class KeyguardStatusView extends GridLayout implements
 	if (lockClockFont == 31) {
             mClockView.setTypeface(Typeface.create("samsung-sys", Typeface.NORMAL));
         }
+        if (lockClockFont == 32) {
+            mClockView.setTypeface(Typeface.create("sourcesanspro-sys", Typeface.NORMAL));
+        }
     }
 
     private void refreshLockDateFont() {
         final Resources res = getContext().getResources();
         boolean isPrimary = UserHandle.getCallingUserId() == UserHandle.USER_OWNER;
-        int lockDateFont = isPrimary ? getLockDateFont() : 29;
+        int lockDateFont = isPrimary ? getLockDateFont() : 28;
         if (lockDateFont == 0) {
             mKeyguardSlice.setViewsTypeface(Typeface.create("sans-serif", Typeface.NORMAL));
         }
@@ -1074,6 +1077,9 @@ public class KeyguardStatusView extends GridLayout implements
     	}
 	if (lockDateFont == 31) {
             mKeyguardSlice.setViewsTypeface(Typeface.create("samsung-sys", Typeface.NORMAL));
+        }
+        if (lockDateFont == 32) {
+            mKeyguardSlice.setViewsTypeface(Typeface.create("sourcesanspro-sys", Typeface.NORMAL));
         }
     }
 

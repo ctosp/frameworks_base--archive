@@ -355,6 +355,9 @@ public class CustomTextClock extends TextView {
         if (lockClockFont == 31) {
             setTypeface(Typeface.create("samsung-sys", Typeface.NORMAL));
         }
+        if (lockClockFont == 32) {
+            setTypeface(Typeface.create("sourcesanspro-sys", Typeface.NORMAL));
+        }
     }
 }
 
