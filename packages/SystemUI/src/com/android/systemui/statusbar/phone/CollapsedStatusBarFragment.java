@@ -21,7 +21,7 @@ import static android.app.StatusBarManager.DISABLE_SYSTEM_INFO;
 import android.annotation.Nullable;
 import android.app.Fragment;
 import android.app.StatusBarManager;
-<<<<<<< HEAD
+
 import android.content.ContentResolver;
 import android.database.ContentObserver;
 import android.os.Bundle;
@@ -30,11 +30,11 @@ import android.util.SparseArray;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.provider.Settings;
-=======
+
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.SparseArray;
->>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
