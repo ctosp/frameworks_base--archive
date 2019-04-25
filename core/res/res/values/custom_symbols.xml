@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (c) 2019 Evolution X
+     Copyright (c) 2019 ctosp
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -24,17 +24,17 @@
   <java-symbol type="array" name="config_disabledComponents" />
   <java-symbol type="array" name="config_forceEnabledComponents" />
 
-<<<<<<< HEAD
+
   <!-- Vendor signatures -->
   <java-symbol type="array" name="config_vendorPlatformSignatures" />
 
   <!-- Device keyhandlers -->
   <java-symbol type="array" name="config_deviceKeyHandlerLibs" />
   <java-symbol type="array" name="config_deviceKeyHandlerClasses" />
-=======
+
     <!-- Whether device ignores the RSSNR signal implementation -->
     <java-symbol type="bool" name="config_ignoreRssnrSignalLevel" />
->>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
+
 
   <!-- Gesture Sensor -->
   <java-symbol type="bool" name="config_enableGestureService" />
@@ -161,7 +161,7 @@
        1 - Fahrenheit -->
   <java-symbol type="integer" name="weather_lockscreen_default_unit" />
 
-<<<<<<< HEAD
+
   <!-- Whether to allow sending active app broadcast -->
   <java-symbol type="bool" name="config_allowActivePackageBroadcast" />
 
@@ -220,7 +220,7 @@
 
   <!-- Screenrecord -->
   <java-symbol type="bool" name="config_enableScreenrecordChord" />
-=======
+
     <!-- Notification info -->
     <java-symbol type="color" name="notification_info_button_text" />
     <java-symbol type="bool" name="config_useDarkBgNotificationIconTextTinting" />
@@ -235,7 +235,7 @@
 
     <!-- Whether device has a physical display cutout -->
     <java-symbol type="bool" name="config_physicalDisplayCutout" />
->>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
+
 
     <!-- Whether to show multiuser icon on keyguard -->
     <java-symbol type="bool" name="config_showMultiuserIconKeyguard" />
