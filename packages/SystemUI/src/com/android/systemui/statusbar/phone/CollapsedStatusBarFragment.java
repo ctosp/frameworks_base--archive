@@ -77,7 +77,7 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     private StatusBar mStatusBarComponent;
     private DarkIconManager mDarkIconManager;
     private View mOperatorNameFrame;
-<<<<<<< HEAD
+
     private LinearLayout mCenterClockLayout;
     private final Handler mHandler = new Handler();
 
@@ -106,8 +106,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     }
     private SettingsObserver mSettingsObserver = new SettingsObserver(mHandler);
     private ContentResolver mContentResolver;
-=======
->>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
 
     private SignalCallback mSignalCallback = new SignalCallback() {
         @Override
@@ -119,10 +117,9 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
+
         mContentResolver = getContext().getContentResolver();
-=======
->>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
+
         mKeyguardMonitor = Dependency.get(KeyguardMonitor.class);
         mNetworkController = Dependency.get(NetworkController.class);
         mStatusBarComponent = SysUiServiceProvider.getComponent(getContext(), StatusBar.class);
@@ -154,11 +151,10 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         showSystemIconArea(false);
         initEmergencyCryptkeeperText();
         initOperatorName();
-<<<<<<< HEAD
+
         mSettingsObserver.observe();
         updateSettings(true);
-=======
->>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
+
     }
 
     @Override
@@ -226,10 +222,9 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
 		animateHide(mClockView, animate, false);
             } else {
                 showNotificationIconArea(animate);
-<<<<<<< HEAD
                 updateClockStyle(animate);
                 showCarrierName(animate);
-=======
+
             }
         }
         // The clock may have already been hidden, but we might want to shift its
@@ -239,7 +234,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
                 hideClock(animate);
             } else {
                 showClock(animate);
->>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
             }
         }
     }
@@ -288,9 +282,8 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
 
     public void showSystemIconArea(boolean animate) {
         animateShow(mSystemIconArea, animate);
-<<<<<<< HEAD
         animateShow(mCenterClockLayout, animate);
-=======
+
     }
 
     public void hideClock(boolean animate) {
@@ -310,7 +303,7 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
             return View.INVISIBLE;
         }
         return View.GONE;
->>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
+
     }
 
     public void hideNotificationIconArea(boolean animate) {
@@ -416,7 +409,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
             mOperatorNameFrame = stub.inflate();
         }
     }
-<<<<<<< HEAD
 
     public void updateSettings(boolean animate) {
         mClockStyle = Settings.System.getIntForUser(mContentResolver,
@@ -442,6 +434,4 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
             animateHide(mCustomCarrierLabel, animate, false);
         }
     }
-=======
->>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
 }
