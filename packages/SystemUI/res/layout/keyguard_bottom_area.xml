@@ -37,8 +37,6 @@
 
         <include layout="@layout/ambient_indication"
             android:id="@+id/ambient_indication_container" />
-
-<<<<<<< HEAD
         <havoc.support.lottie.LottieAnimationView
             android:id="@+id/charging_indication"
             android:layout_width="@dimen/keyguard_charging_indication_width"
@@ -49,8 +47,6 @@
             android:animateLayoutChanges="true"
             android:visibility="gone" />
 
-=======
->>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
         <com.android.systemui.statusbar.phone.KeyguardIndicationTextView
             android:id="@+id/keyguard_indication_enterprise_disclosure"
             android:layout_width="match_parent"
