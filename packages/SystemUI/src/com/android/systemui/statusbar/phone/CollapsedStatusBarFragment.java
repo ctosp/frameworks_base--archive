@@ -21,7 +21,6 @@ import static android.app.StatusBarManager.DISABLE_SYSTEM_INFO;
 import android.annotation.Nullable;
 import android.app.Fragment;
 import android.app.StatusBarManager;
-
 import android.content.ContentResolver;
 import android.database.ContentObserver;
 import android.os.Bundle;
@@ -30,11 +29,6 @@ import android.util.SparseArray;
 import android.os.Handler;
 import android.os.UserHandle;
 import android.provider.Settings;
-
-import android.os.Bundle;
-import android.os.Parcelable;
-import android.util.SparseArray;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,7 +71,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     private StatusBar mStatusBarComponent;
     private DarkIconManager mDarkIconManager;
     private View mOperatorNameFrame;
-
     private LinearLayout mCenterClockLayout;
     private final Handler mHandler = new Handler();
 
@@ -117,9 +110,7 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         mContentResolver = getContext().getContentResolver();
-
         mKeyguardMonitor = Dependency.get(KeyguardMonitor.class);
         mNetworkController = Dependency.get(NetworkController.class);
         mStatusBarComponent = SysUiServiceProvider.getComponent(getContext(), StatusBar.class);
@@ -151,10 +142,8 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         showSystemIconArea(false);
         initEmergencyCryptkeeperText();
         initOperatorName();
-
         mSettingsObserver.observe();
         updateSettings(true);
-
     }
 
     @Override
@@ -224,16 +213,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
                 showNotificationIconArea(animate);
                 updateClockStyle(animate);
                 showCarrierName(animate);
-
-            }
-        }
-        // The clock may have already been hidden, but we might want to shift its
-        // visibility to GONE from INVISIBLE or vice versa
-        if ((diff1 & DISABLE_CLOCK) != 0 || mClockView.getVisibility() != clockHiddenMode()) {
-            if ((state1 & DISABLE_CLOCK) != 0) {
-                hideClock(animate);
-            } else {
-                showClock(animate);
             }
         }
     }
@@ -283,27 +262,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     public void showSystemIconArea(boolean animate) {
         animateShow(mSystemIconArea, animate);
         animateShow(mCenterClockLayout, animate);
-
-    }
-
-    public void hideClock(boolean animate) {
-        animateHiddenState(mClockView, clockHiddenMode(), animate);
-    }
-
-    public void showClock(boolean animate) {
-        animateShow(mClockView, animate);
-    }
-
-    /**
-     * If panel is expanded/expanding it usually means QS shade is opening, so
-     * don't set the clock GONE otherwise it'll mess up the animation.
-     */
-    private int clockHiddenMode() {
-        if (!mStatusBar.isClosed() && !mKeyguardMonitor.isShowing()) {
-            return View.INVISIBLE;
-        }
-        return View.GONE;
-
     }
 
     public void hideNotificationIconArea(boolean animate) {
