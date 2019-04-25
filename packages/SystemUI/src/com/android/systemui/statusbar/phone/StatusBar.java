@@ -385,8 +385,11 @@ public class StatusBar extends SystemUI implements DemoMode,
      */
     private static final float SRC_MIN_ALPHA = 0.002f;
 
+<<<<<<< HEAD
     public static boolean USE_OLD_MOBILETYPE = false;
 
+=======
+>>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
     static {
         boolean onlyCoreApps;
         try {

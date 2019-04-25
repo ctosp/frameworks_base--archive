@@ -27,9 +27,6 @@
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
     </string-array>
 
-    <!-- True if the gesture service should be started at system start -->
-    <bool name="config_enableGestureService">false</bool>
-
     <!-- Whether device ignores the RSSNR signal implementation -->
     <bool name="config_ignoreRssnrSignalLevel">false</bool>
 
@@ -200,6 +197,7 @@
     <!-- Whether device has a physical display cutout -->
     <bool name="config_physicalDisplayCutout">false</bool>
 
+<<<<<<< HEAD
     <!-- minimal way before long swipe will get accepted - in dp -->
     <integer name="nav_gesture_swipe_min_length">60</integer>
 
@@ -233,6 +231,8 @@
     <!-- Ambient display music ticker -->
     <bool name="config_canForceDozeNotifications">true</bool>
 
+=======
+>>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
     <!-- Whether to show multiuser icon on keyguard -->
     <bool name="config_showMultiuserIconKeyguard">true</bool>
 
@@ -240,10 +240,13 @@
          before setting power profiles on boot. -->
     <bool name="config_waitForMpctlOnBoot">false</bool>
 
+<<<<<<< HEAD
     <!-- Component name for the activity that will be presenting the Oreo's Recents UI -->
     <string name="config_recentsComponentNameOreo" translatable="false">com.android.systemui/.recents.RecentsActivity</string>
 
     <!-- Whether or not we should show vendor mismatch message -->
     <bool name="config_show_vendor_mismatch_message">false</bool>
 
+=======
+>>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
 </resources>

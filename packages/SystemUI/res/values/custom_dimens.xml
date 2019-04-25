@@ -53,6 +53,7 @@
     <!-- Ambient indication -->
     <dimen name="ambient_indication_icon_size">20.0dip</dimen>
     <dimen name="ambient_indication_margin_bottom">12.0dip</dimen>
+<<<<<<< HEAD
 
     <!-- Floating action button -->
     <dimen name="floating_action_button_height">54dp</dimen>
@@ -73,4 +74,6 @@
     <!-- Height of the status bar header bar -->
     <dimen name="status_bar_header_height">130dp</dimen>
 
+=======
+>>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
 </resources>

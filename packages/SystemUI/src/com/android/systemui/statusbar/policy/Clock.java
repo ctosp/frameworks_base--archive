@@ -385,6 +385,21 @@ public class Clock extends TextView implements DemoMode, CommandQueue.Callbacks,
     }
 
     @Override
+<<<<<<< HEAD
+=======
+    public void onTuningChanged(String key, String newValue) {
+        if (CLOCK_SECONDS.equals(key)) {
+            mShowSeconds = TunerService.parseIntegerSwitch(newValue, false);
+            updateShowSeconds();
+        } else {
+            setClockVisibleByUser(!StatusBarIconController.getIconBlacklist(newValue)
+                    .contains("clock"));
+            updateClockVisibility();
+        }
+    }
+
+    @Override
+>>>>>>> f8b48465e9407eae03cd169c236f45d17bc1fb27
     public void disable(int state1, int state2, boolean animate) {
         boolean clockVisibleByPolicy = (state1 & StatusBarManager.DISABLE_CLOCK) == 0;
         if (clockVisibleByPolicy != mClockVisibleByPolicy) {
